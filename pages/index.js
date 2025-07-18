@@ -27,7 +27,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-6 flex flex-col items-center">
       <div className="max-w-4xl w-full">
         <header className="mb-10 text-center">
-          <img src="/logo.png" alt="Elråd logo" className="mx-auto mb-4 h-20" />
+<img src="/logo.png" alt="Elråd logo" className="mx-auto mb-4 h-20" />
           <h1 className="text-5xl font-extrabold text-blue-700 mb-4">Elråd.no</h1>
           <p className="text-xl text-gray-700">
             Få gratis feilsøkingsråd for elektriske problemer i hjemmet ditt – levert på e-post.
