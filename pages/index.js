@@ -1,8 +1,4 @@
 import { useState } from "react";
-import Card from "../components/ui/card";
-import Button from "../components/ui/button";
-import Input from "../components/ui/input";
-import Textarea from "../components/ui/textarea";
 
 export default function Home() {
   const [message, setMessage] = useState("");
@@ -37,32 +33,35 @@ export default function Home() {
           </p>
         </header>
 
-        <Card className="mb-8 shadow-lg">
-          <form onSubmit={handleSubmit} className="p-6">
+        <div className="bg-white rounded-xl p-6 mb-8 shadow-lg">
+          <form onSubmit={handleSubmit}>
             <h2 className="text-3xl font-bold text-blue-600 mb-6">📋 Send inn problemet</h2>
-            <Textarea
+            <textarea
               placeholder="F.eks. sikringen til badet går ofte..."
-              className="mb-4"
+              className="mb-4 w-full p-4 border border-gray-300 rounded-lg"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <Input
+            <input
               type="text"
               placeholder="E-post eller telefon"
-              className="mb-6"
+              className="mb-6 w-full p-4 border border-gray-300 rounded-lg"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Button type="submit" className="w-full text-lg py-3">
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-3 rounded-lg transition"
+            >
               {status === "sender" ? "Sender..." : "Få gratis AI-svar"}
-            </Button>
+            </button>
             {status === "ok" && <p className="text-green-600 mt-4">Svar sendt! Du får det på e-post.</p>}
             {status === "error" && <p className="text-red-600 mt-4">Noe gikk galt. Prøv igjen.</p>}
           </form>
-        </Card>
+        </div>
 
-        <Card className="mb-8 shadow-md">
-          <div className="p-6 text-center">
+        <div className="bg-white rounded-xl p-6 mb-8 shadow-md">
+          <div className="text-center">
             <h2 className="text-2xl font-semibold text-blue-700 mb-4">⚡ Hva får du?</h2>
             <ul className="list-disc list-inside text-left text-gray-700 text-lg">
               <li>AI-generert svar på problemet ditt</li>
@@ -71,14 +70,14 @@ export default function Home() {
               <li>Mulighet for å bestille hjelp</li>
             </ul>
           </div>
-        </Card>
+        </div>
 
-        <Card className="shadow-sm">
-          <div className="p-6 text-center">
-            <h2 className="text-2xl font-semibold text-blue-700 mb-4">Trenger du elektriker på stedet?</h2>
-            <Button variant="secondary" className="text-base py-2">Bestill hjemmebesøk</Button>
-          </div>
-        </Card>
+        <div className="bg-white rounded-xl p-6 shadow-sm text-center">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Trenger du elektriker på stedet?</h2>
+          <button className="bg-gray-100 hover:bg-gray-200 text-base py-2 px-4 rounded">
+            Bestill hjemmebesøk
+          </button>
+        </div>
 
         <footer className="mt-12 text-sm text-gray-500 text-center">
           © 2025 Elråd.no – En tjeneste av Preben Nygård
@@ -87,7 +86,3 @@ export default function Home() {
     </div>
   );
 }
-// Trigger production deploy
-
-
-
