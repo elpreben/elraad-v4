@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elråd</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <script src="js/script.js" defer></script>
 </head>
-<body>
-    <header>
+<body class="bg-gray-100 font-sans">
+    <!-- Header with Navigation -->
+    <header class="bg-gray-900 text-white py-4">
         <nav>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="om-elraad.html">Om Elråd</a></li>
-                <li><a href="priser.html">Priser</a></li>
-                <li><a href="kontakt.html">Kontakt oss</a></li>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="hover:text-red-500">Hjem</a></li>
+                <li><a href="om-elraad.html" class="hover:text-red-500">Om Elråd</a></li>
+                <li><a href="priser.html" class="hover:text-red-500">Priser</a></li>
+                <li><a href="kontakt.html" class="hover:text-red-500">Kontakt oss</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="welcome">
-        <h1>Velkommen til Elråd!</h1>
-        <p>Din pålitelige kilde for elektriske råd og veiledning.</p>
-        <a href="priser.html" class="button">Se våre priser</a>
-    </section>
+    <!-- Main content -->
+    <main class="text-center p-10">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Velkommen til Elråd!</h1>
+        <p class="text-lg text-gray-600 mb-6">Din pålitelige kilde for elektriske råd og veiledning.</p>
+        <a href="priser.html" class="inline-block bg-red-500 text-white py-2 px-6 rounded hover:bg-red-400">Se våre priser</a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4 text-center">
+        <p>&copy; 2025 Elråd - Alle rettigheter reservert.</p>
+    </footer>
 </body>
 </html>
